@@ -20,7 +20,11 @@
           <li><a href="contacts.htm">Контакты</a></li>
         </ul>
         <ul>
-          <li><button type="button">Вход</button></li>
+          <li>
+            <a href="login.html">
+              Вход
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -60,7 +64,7 @@
         <a href="news.html">Все новости</a>
       </section>
 
-      <section>
+      <section class="gallery">
         <h2>Фотогалерея</h2>
         <figure>
           <a href="#">
@@ -90,8 +94,25 @@
       <section>
         <h2>Записаться</h2>
         <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-          <!-- форма для записи: ДАТА  ВРЕМЯ  ВАШЕ ИМЯ  ТЕЛЕФОН  ОТПРАВИТЬ -->
-
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="sign-up-date">Дата</label>
+            <input id="sign-up-date" type="date" name="date" value="2020-02-07">
+          </p>
+          <p>
+            <label for="sign-up-time">Время</label>
+            <input id="sign-up-time" type="time" name="time" value="19:40">
+          </p>
+          <p>
+            <label for="sign-up-name">Ваше имя</label>
+            <input id="sign-up-name" type="text" name="name" value="" placeholder="Борода">
+          </p>
+          <p>
+            <label for="sign-up-telephone">Телефон</label>
+            <input id="sign-up-telephone" type="tel" name="telephone" value="" placeholder="+7 123 456 78 90" pattern="\+[0-9]{11,}">
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
 
@@ -117,15 +138,35 @@
     <section>
       <h2>Личный кабинет</h2>
       <p>ВВедите пожалуйста свой логин и пароль</p>
-      <!-- форма для входа: ЛОГИН ПАРОЛЬ ЗАПОМНИТЕ МЕНЯ Я ЗАБЫЛ ПАРОЛЬ! ВОЙТИ -->
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input id="user-login" type="email" name="login" placeholder="Логин">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Логин</label>
+          <input id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <p>
+          <label>
+            <input type="checkbox" name="remember" checked>
+            Запомните меня
+          </label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+      <button type="submit">Войти</button>
+      </form>
       <button type="button" name="window-close">Закрыть</button>
     </section>
 
     <section>
       <h2>Как проехать</h2>
-      <!-- карта -->
+      <p>
+        <img src="./img/map-small.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
       <button type="button" name="window-close">Закрыть</button>
     </section>
-    <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
   </body>
 </html>
+
+<!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
